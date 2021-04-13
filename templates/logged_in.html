@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Home {% endblock %}
+
+{% block content %}
+<div class="m-3">
+    <p>Hello You have Logged in as {{ email }}</p>
+    <p>Your section is {{ section }}</p>
+</div>
+<section class="w-50">
+    <label class="m-3">News and Updates</label>
+    <div class="border border-secondary h-32 m-3 p-2 rounded-xl">
+        News 1
+    </div>
+    <div class="border border-secondary h-32 m-3 p-2 rounded-xl">
+        News 2
+    </div>
+    <div class="border border-secondary h-32 m-3 p-2 rounded-xl">
+        News 3
+    </div>
+    <div class="border border-secondary h-32 m-3 p-2 rounded-xl">
+        News 4
+    </div>
+</section>
+
+{% endblock %}
