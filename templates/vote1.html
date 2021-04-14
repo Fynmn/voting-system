@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Vote Now!{% endblock %}
+
+{% block content %}
+
+
+<div>
+    <form action="">
+        <div> 
+            <!-- 1ST ROW -->
+            <div class="border border-primary w-64 m-3">
+                <div><label for="">Chaiperson</label></div>
+                <input type="radio" id="candidate1" name="president">
+                <label for="candidate1">{{ chairperson1 }}</label><br>
+                <input type="radio" id="candidate2" name="president">
+                <label for="candidate2">{{ chairperson2 }}</label><br>
+                <input type="radio" id="candidate3" name="president">
+                <label for="candidate3">{{ chairperson3 }}</label>
+            </div>
+            <div class="border border-primary w-64 m-3">
+                <div><label for="">Vice Chaiperson</label></div>
+                <input type="radio" id="candidate1" name="president">
+                <label for="candidate1">{{ chairperson1 }}</label><br>
+                <input type="radio" id="candidate2" name="president">
+                <label for="candidate2">{{ chairperson2 }}</label><br>
+                <input type="radio" id="candidate3" name="president">
+                <label for="candidate3">{{ chairperson3 }}</label>
+            </div>
+            <div class="border border-primary w-64 m-3">
+                <div><label for="">Secretary</label></div>
+                <input type="radio" id="candidate1" name="president">
+                <label for="candidate1">{{ chairperson1 }}</label><br>
+                <input type="radio" id="candidate2" name="president">
+                <label for="candidate2">{{ chairperson2 }}</label><br>
+                <input type="radio" id="candidate3" name="president">
+                <label for="candidate3">{{ chairperson3 }}</label>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

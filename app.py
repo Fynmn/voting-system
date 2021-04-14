@@ -159,6 +159,49 @@ def admin_logout():
         return render_template('admin_login.html')
 
 
+@app.route("/vote", methods=["POST", "GET"])
+def vote():
+    if "email" in session:
+        candidates_records = db.candidates
+
+        #query all positions
+        chairperson = candidates_records.distinct("chairperson") #query all documents with chairperson key
+        secretary = candidates_records.distinct("secretary")
+        treasurer = candidates_records.distinct("treasurer")
+        auditor = candidates_records.distinct("auditor")
+        business_manager = candidates_records.distinct("business_manager")
+        representative = candidates_records.distinct("representative")
+
+
+        if request.method=="POST":
+            if "chairperson_submit_btn" in request.form:
+                chairperson_vote = request.form.get("chairperson")
+                print(chairperson_vote)
+            if "secretary_submit_btn" in request.form:
+                secretary_vote = request.form.get("secretary")
+                print(secretary_vote)
+            if "treasurer_submit_btn" in request.form:    
+                treasurer_vote = request.form.get("treasurer")
+                print(treasurer_vote)
+            if "auditor_submit_btn" in request.form:
+                auditor_vote = request.form.get("auditor")
+                print(auditor_vote)
+            if "business_manager_submit_btn" in request.form:
+                business_manager_vote = request.form.get("business_manager")
+                print(business_manager_vote)
+            if "representative_submit_btn" in request.form:
+                representative_vote = request.form.get("representative")
+                print(representative_vote)
+
+        return render_template('vote.html', chairperson1=chairperson[0], chairperson2=chairperson[1], chairperson3=chairperson[2], 
+        secretary1=secretary[0], secretary2=secretary[1], secretary3=secretary[2], 
+        treasurer1=treasurer[0], treasurer2=treasurer[1], treasurer3=treasurer[2],
+        auditor1=auditor[0], auditor2=auditor[1], auditor3=auditor[2],
+        business_manager1=business_manager[0], business_manager2=business_manager[1], business_manager3=business_manager[2],
+        representative1=representative[0], representative2=representative[1], representative3=representative[2])
+    else:
+        return redirect(url_for("login"))
+
 #end of code to run it
 if __name__ == "__main__":
   app.run(debug=True)

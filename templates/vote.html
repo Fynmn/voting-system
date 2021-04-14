@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Vote Now!{% endblock %}
+
+{% block content %}
+
+
+<div class="grid justify-center">
+    <div class="d-inline-flex">
+        <div class="border border-primary w-64 m-3 p-3">
+            <form method="POST"> 
+                <div class="text-center"><label for="">Chairperson</label></div>
+                
+                <label for="candidate1">{{ chairperson1 }}</label>
+                <input type="radio" id="candidate1" name="chairperson" value="{{ chairperson1 }}" required><br>
+                <label for="candidate2">{{ chairperson2 }}</label>
+                <input type="radio" id="candidate2" name="chairperson" value="{{ chairperson2}}" required><br>
+                <label for="candidate3">{{ chairperson3 }}</label>
+                <input type="radio" id="candidate3" name="chairperson" value="{{chairperson3}}" required>
+                <div class="text-center"><input id="chairperson_submit_btn" type="submit" name="chairperson_submit_btn" class="btn-primary px-4" value="Vote"></div>
+              </form> 
+        </div>
+        <div class="border border-primary w-64 m-3 p-3">
+            <form method="POST">
+                <div class="text-center"><label for="">Secretary</label></div>
+                
+                <label for="candidate1">{{ secretary1 }}</label>
+                <input type="radio" id="candidate1" name="secretary" value="{{ secretary1 }}" required><br>
+                <label for="candidate2">{{ secretary2 }}</label>
+                <input type="radio" id="candidate2" name="secretary" value="{{ secretary2 }}" required><br>
+                <label for="candidate3">{{ secretary3 }}</label>
+                <input type="radio" id="candidate3" name="secretary" value="{{ secretary3 }}" required>
+                <div class="text-center"><input id="secretary_submit_btn" type="submit" name="secretary_submit_btn" class="btn-primary px-4" value="Vote"></div>
+              </form> 
+        </div>
+        <div class="border border-primary w-64 m-3 p-3">
+            <form method="POST">
+                <div class="text-center"><label for="">Treasurer</label></div>
+
+                <label for="candidate1">{{ treasurer1 }}</label>
+                <input type="radio" id="candidate1" name="treasurer" value="{{ treasurer1 }}" required><br>
+                <label for="candidate2">{{ treasurer2 }}</label>
+                <input type="radio" id="candidate2" name="treasurer" value="{{ treasurer2 }}" required><br>
+                <label for="candidate3">{{ treasurer3 }}</label>
+                <input type="radio" id="candidate3" name="treasurer" value="{{ treasurer3 }}" required>
+                <div class="text-center"><input id="treasurer_submit_btn" type="submit" name="treasurer_submit_btn" class="btn-primary px-4" value="Vote"></div>
+              </form> 
+        </div>
+        
+    </div>
+
+    <!-- 2ND ROW -->
+    <div class="d-inline-flex">
+        <div class="border border-primary w-64 m-3 p-3">
+            <form method="POST">
+                <div class="text-center"><label for="">Auditor</label></div>
+                
+                <label for="candidate1">{{ auditor1 }}</label>
+                <input type="radio" id="candidate1" name="auditor" value="{{ auditor1 }}" required><br>
+                <label for="candidate2">{{ auditor2 }}</label>
+                <input type="radio" id="candidate2" name="auditor" value="{{ auditor2 }}" required><br>
+                <label for="candidate3">{{ auditor3 }}</label>
+                <input type="radio" id="candidate3" name="auditor" value="{{ auditor3 }}" required>
+                <div class="text-center"><input id="auditor_submit_btn" type="submit" name="auditor_submit_btn" class="btn-primary px-4" value="Vote"></div>
+              </form> 
+        </div>
+        <div class="border border-primary w-64 m-3 p-3">
+            <form method="POST">
+                <div class="text-center"><label for="">Business Manager</label></div>
+                
+                <label for="candidate1">{{ business_manager1 }}</label>
+                <input type="radio" id="candidate1" name="business_manager" value="{{ business_manager1 }}" required><br>
+                <label for="candidate2">{{ business_manager2 }}</label>
+                <input type="radio" id="candidate2" name="business_manager" value="{{ business_manager2 }}" required><br>
+                <label for="candidate3">{{ business_manager3 }}</label>
+                <input type="radio" id="candidate3" name="business_manager" value="{{ business_manager3 }}" required>
+                <div class="text-center"><input id="business_manager_submit_btn" type="submit" name="business_manager_submit_btn" class="btn-primary px-4" value="Vote"></div>
+              </form> 
+        </div>
+        <div class="border border-primary w-64 m-3 p-3">
+            <form method="POST">
+                <div class="text-center"><label for="">Representatives</label></div>
+                
+                <label for="candidate1">{{ representative1 }}</label>
+                <input type="radio" id="candidate1" name="representative" value="{{ representative1 }}" required><br>
+                <label for="candidate2">{{ representative2 }}</label>
+                <input type="radio" id="candidate2" name="representative" value="{{ representative2 }}" required><br>
+                <label for="candidate3">{{ representative3 }}</label>
+                <input type="radio" id="candidate3" name="representative" value="{{ representative3 }}" required>
+                <div class="text-center"><input id="representative_submit_btn" type="submit" name="representative_submit_btn" class="btn-primary px-4" value="Vote"></div>
+              </form> 
+        </div>
+        
+    </div>
+
+    <div class="m-3 grid">
+        <button class="btn-primary mx-72 py-2">Submit Votes</button>
+    </div>
+</div>
+
+{% endblock %}
